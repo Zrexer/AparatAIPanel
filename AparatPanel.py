@@ -3,7 +3,7 @@ import MyBaleCloud.balecloud as mb
 import random
 import platform
 
-token = "144621494:CfQDVNZTznD28NiRrTdbGiwZlvcWZRRrGKqqkVrO"
+token = ""
 
 green = "\033[92m"
 yellow = "\033[93m"
