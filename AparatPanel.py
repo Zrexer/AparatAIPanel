@@ -30,7 +30,7 @@ print(f"""{green}
    o/         \o    <o>         <o>        
   /v           v\    |           |         
  />             <\  / \         / \        
-        {t}
+        {t}{white}
 """)
 
 msg_lis = []
