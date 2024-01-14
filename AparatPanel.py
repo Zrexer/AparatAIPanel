@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 import CryptoX
 import MyBaleCloud.balecloud as mb
 import random
 import platform
 
-token = ""
+token = "144621494:CfQDVNZTznD28NiRrTdbGiwZlvcWZRRrGKqqkVrO"
 
 green = "\033[92m"
 yellow = "\033[93m"
@@ -129,6 +130,18 @@ def VIP():
                             
                         app.sendMessage("{}Request Received\n\n{}".format(loggers.unlocker(), dt), chat, msg_id)
                 
+                if text.startswith("/video-information"):
+                    if len(text.split()) < 2:
+                        app.sendMessage(loggers("/video-information VIDEO_HASH_UID => replace username on 'VIDEO_HASH_UID'").faild, chat, msg_id)
+                    else:
+                        hashx = text.split()[1]    
+                        data = hoyo.getVideoInformation(videoHashUID=hashx)['video']
+                        dt = ""
+                        for key, val in data.items():
+                            dt += "{} {:<5} ─> {:<}\n".format(random.choice(danger_emj_lis), str(key), str(val))
+                            
+                        app.sendMessage("{}Request Received\n\n{}".format(loggers.unlocker(), dt), chat, msg_id)
+
             else:
                 msg_lis.append(msg_id)
                 
